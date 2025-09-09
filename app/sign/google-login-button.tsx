@@ -1,11 +1,20 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
+import { login } from './sign.action';
 
 export function GoogleLoginButton() {
+  const makeLogin = () => {
+    login('google');
+  };
   return (
-    <Button variant='outline' className='w-full h-12 gap-2 text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50'
+    <Button
+      onClick={makeLogin}
+      variant='outline'
+      className='h-12 w-full gap-2 rounded-md border border-gray-300 bg-white text-gray-900 hover:bg-gray-50'
     >
       <svg
-        className='w-6 h-6'
+        className='h-6 w-6'
         viewBox='0 0 48 48'
         xmlns='http://www.w3.org/2000/svg'
         aria-hidden='true'
@@ -27,7 +36,7 @@ export function GoogleLoginButton() {
           d='M24 48c6.48 0 11.9-2.13 15.87-5.78l-7.09-5.52c-2.05 1.37-4.7 2.18-8.78 2.18-6.43 0-11.89-3.62-14.53-8.88l-7.91 6.47C6.4 42.52 14.63 48 24 48z'
         />
       </svg>
-      <span className='text-sm font-medium'>Google</span>
+      <span className='font-medium text-sm'>Google</span>
     </Button>
   );
 }

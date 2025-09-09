@@ -1,5 +1,5 @@
+import { type ComponentProps, type RefObject, useId } from 'react';
 import { cn } from '@/lib/utils';
-import { ComponentProps, RefObject, useId } from 'react';
 import { Input } from './ui/input';
 
 type Props = {
@@ -23,7 +23,7 @@ export default function LabelInput({
   const uniqName = useId();
   // const ref = useRef<HTMLInputElement>(null) //* type 설정을 위해 알아보는 법
   return (
-    <label htmlFor={uniqName} className='text-sm font-normal capitalize'>
+    <label htmlFor={uniqName} className='font-normal text-sm capitalize'>
       {label}
       {/* name은 action으로 넘어갈 때 param name */}
       <Input
@@ -33,7 +33,7 @@ export default function LabelInput({
         ref={ref}
         placeholder={placeholder}
         className={cn(
-          'font-normal bg-gray-100 focus:bg-white',
+          'bg-gray-100 font-normal focus:bg-white',
           // { isActive: 'xx' },
           className
         )}

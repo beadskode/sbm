@@ -12,7 +12,6 @@ const THEME_ICONS = {
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useTheme();
-console.log(theme)
   // 테마로 인한 hydration 에러 방지 //
   const [mount, setMount] = useState(false);
 
