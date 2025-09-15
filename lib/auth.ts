@@ -5,6 +5,7 @@ import Google from 'next-auth/providers/google';
 import Kakao from 'next-auth/providers/kakao';
 import Naver from 'next-auth/providers/naver';
 import z from 'zod';
+import prisma from './db';
 
 export const {
   handlers: { GET, POST },

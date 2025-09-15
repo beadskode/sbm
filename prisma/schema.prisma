@@ -4,8 +4,8 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
@@ -58,7 +58,7 @@ model Mark {
   link      String   @db.VarChar(512)
   image     String?  @db.VarChar(255)
   maker     Int?     @db.UnsignedInt
-  descript    String?  @db.VarChar(512)
+  descript  String?  @db.VarChar(512)
   Likes     Likes[]
   Book      Book     @relation(fields: [book], references: [id], onDelete: Cascade, map: "fk_Mark_book")
   Member    Member?  @relation(fields: [maker], references: [id], map: "fk_Mark_maker_Member")
