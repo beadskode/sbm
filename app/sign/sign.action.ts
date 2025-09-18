@@ -8,7 +8,6 @@ import { signIn, signOut } from '@/lib/auth';
 import prisma from '@/lib/db';
 import { newToken } from '@/lib/utils';
 import { type ValidError, validate } from '@/lib/validator';
-import { sendRegistCheck } from './mail.action';
 
 export type Provider = 'google' | 'github' | 'naver' | 'kakao';
 
@@ -106,8 +105,15 @@ export const regist = async (
     data: { email, nickname, passwd, emailcheck },
   });
 
-  await sendRegistCheck(email, emailcheck);
-
+  // await sendRegistCheck(email, emailcheck);
+  const { NEXT_PUBLIC_URL, INTERNAL_SECRET } = process.env;
+  fetch(`${NEXT_PUBLIC_URL}/api/sendmail`, {
+    method: 'POST',
+    headers: {
+      authorization: `Bearer ${INTERNAL_SECRET}`,
+    },
+    body: JSON.stringify({ email, emailcheck }),
+  });
   redirect(`/sign/error?error=CheckEmail&email=${email}`);
 };
 

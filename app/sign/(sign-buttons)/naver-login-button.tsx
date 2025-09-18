@@ -10,6 +10,7 @@ export function NaverLoginButton({
     'use server';
     await loginNaver(redirectTo);
   };
+
   return (
     <Button
       onClick={makeNaverLogin}

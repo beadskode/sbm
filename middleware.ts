@@ -14,7 +14,7 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  runtime: 'nodejs', // TODO: remove nodejs runtime (편리하지만, 성능적으로 불리하므로)
+  // runtime: 'nodejs', // TODO: remove nodejs runtime (편리하지만, 성능적으로 불리하므로)
   matcher: [
     '/((?!sign|_next/static|_next/image|forgotpasswd|api/auth|registcheck|favicon.ico|robots.txt|images|.well-known|$).*)',
     '/api/:path*',

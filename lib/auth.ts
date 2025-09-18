@@ -60,7 +60,7 @@ export const {
 
       const mbr = await findMemberByEmail(email, isCredential);
       if (mbr?.emailcheck) {
-        return `/sign/error?error=CheckEmail&email=${email}&oldEmailcheck=${mbr.emailcheck}`;
+        return `/sign/error?error=CheckEmail&email=${email}&emailcheck=${mbr.emailcheck}`;
       }
 
       if (isCredential) {
