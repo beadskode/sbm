@@ -1,0 +1,521 @@
+<html>
+<head>
+    <base href="https://www.saramin.co.kr">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="noindex,nofollow">
+    <title>이력서 보기</title>
+    <style type="text/css">
+        /* reset css */
+        html {
+            color: #000;
+            background: #fff
+        }
+
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, button {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            width: 100%;
+            min-width: 1260px;
+            font-size: 13px;
+            color: #444;
+            font-family: "Malgun Gothic", dotum, gulim, sans-serif
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+            font-weight: normal;
+            margin: 0;
+            padding: 0
+        }
+
+        ol, ul, li {
+            list-style: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th, td {
+            padding: 0;
+            margin: 0;
+        }
+
+        address, caption, cite, code, dfn, em, strong, th, var {
+            font-style: inherit;
+            font-weight: inherit
+        }
+
+        p {
+            margin: 0
+        }
+
+        strong {
+            font-weight: bold
+        }
+
+        caption, legend, .hidden, .blind {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: -1000%;
+            z-index: -1;
+            width: 1px;
+            height: 1px;
+            font-size: 0;
+            line-height: 0
+        }
+
+        .print_wrap div, p, ul, td, input, a, span, em {
+            font-style: normal;
+            font-family: "Malgun Gothic", dotum, gulim, sans-serif;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="print_wrap">
+    <table style="width:600px;">
+    <tr>
+        <td>
+            <table style="width:600px;">
+                <tr>
+                    <td style="width:500px">
+                        <table>
+                            <tr>
+                                <td style="color:#292e41;font-size:16px;font-weight:bold;word-break: break-all">
+                                    고아영                                </td>
+                                <td style="padding-left:8px;">
+                                    <span style="background:#f4f6fa;color:#475067;font-size:10px;font-weight:bold;word-break: break-all">
+                                        경력                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td rowspan="3" style="width:53px;vertical-align:top;">
+						<span style="display:inline-block;width:53px;border:1px solid #eaedf4;overflow:hidden;">
+							<img width="53" height="75" alt="" src="https://www.saramin.co.kr/zf_user/persons/picture?idx=15857533|6e3208fa1e60626dc844bd103647073d3f6d1f7dac012a904101157087e2d613" border="0" />						</span>
+                    </td>
+                </tr>
+                                    <tr>
+                        <td style="padding-top:8px;">
+                            <p style="color:#67738e;font-size:10px;line-height:24px;word-break: break-all">
+                                여, 1994 (31세)                            </p>
+                        </td>
+                    </tr>
+                                    <tr>
+                    <td style="padding-top:8px;">
+                        <table style="width:500px;color:#292e41;font-size:12px;word-break: break-all">
+                            <tr>
+                                <td style="width:166px;">beadskode@gmail.com</td>
+                                <td style="width:166px;">010-2627-0886</td>
+                                <td style="width:166px;"></td>
+                            </tr>
+                                                            <tr>
+                                    <td colspan="3" style="color:#292e41;font-size:10px;word-break: break-all">(04773) 서울 성동구 왕십리로</td>
+                                </tr>
+                                                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- DashBoard -->
+    <tr>
+        <td style="padding-top:40px;">
+            <table style="width:600px;background:#f8fafc;">
+                <tr>
+                    <td style="padding:12px 0;vertical-align:top;">
+                        <table>
+                            <tr>
+                                                                    <td style="padding-left:12px;width:150px;vertical-align:top;">
+                                        <strong style="font-size:10px;color:#67738e;font-weight:bold;margin-bottom:4px;">경력</strong>
+                                        <p style="color:#292e41;font-size:10px;">총  2년 8개월 (퇴사)<br>㈜버추얼랩</p>
+                                    </td>
+                                                                        <td style="padding-left:12px;width:150px;vertical-align:top;border-left:1px solid #eaedf4;">
+                                        <strong style="font-size:10px;color:#67738e;font-weight:bold;margin-bottom:4px;">학력</strong>
+                                        <p style="color:#292e41;font-size:10px;">대학교(4년) 졸업<br>인하대학교</p>
+                                    </td>
+                                                                        <td style="padding-left:12px;width:150px;vertical-align:top;border-left:1px solid #eaedf4;">
+                                        <strong style="font-size:10px;color:#67738e;font-weight:bold;margin-bottom:4px;">희망연봉</strong>
+                                        <p style="color:#292e41;font-size:10px;">3,600~3,800만원<br>직전 연봉 : 3,800&nbsp;만원</p>
+                                    </td>
+                                                                        <td style="padding-left:12px;width:150px;vertical-align:top;border-left:1px solid #eaedf4;">
+                                        <strong style="font-size:10px;color:#67738e;font-weight:bold;margin-bottom:4px;">포트폴리오</strong>
+                                        <p style="color:#292e41;font-size:10px;">-</p>
+                                    </td>
+                                                                </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>    <!-- skill -->
+    <table style="width:600px;">
+                    <tr>
+                <td style="padding-top:40px;">
+                    <h3 style="font-size:16px;font-weight:bold;color:#292e41">나의 스킬</h3>
+                    <p style="line-height:43px;word-break: break-all">
+                                                    <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">CSS3</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">Vue.js</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">JavaScript</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">Nuxt.js</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">GitLab</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">Notion.so</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">Git</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">Bootstrap</span>
+                                                        <span style="border:1px solid #d7dce5;padding:7px 11px;color:#475067;font-size:13px;word-break: break-all">Slack</span>
+                                                </p>
+                </td>
+            </tr>
+                </table>
+        <table style="width:600px;">
+        <tr>
+            <td style="padding-top:60px;"></td>
+        </tr>
+            <tr>
+        <td>
+            <table style="border-top:1px solid #8491a7;">
+                <tr>
+                    <td style="width:110px;vertical-align:top;">
+                        <h2 style="font-size:12px;margin-top:28px;word-break:break-all">경력</h2>
+                        <p style="margin-top:4px;font-size:10px;color:#67738e;word-break: break-all">
+                            <span>총 <em>2</em>년<em>8</em>개월</span>                        </p>
+                                            </td>
+                    <td style="width:490px;vertical-align:top;padding-bottom:32px;">
+                        <table>
+                                                            <tr>
+                                    <td style="padding:28px 0;">
+                                        <table style="width:490px;">
+                                            <tr>
+                                                <td style="text-align:left;">
+                                                    <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">㈜버추얼랩</h3>
+                                                </td>
+                                                <td style="text-align:right;font-size:10px;color:#292e41;word-break: break-all">
+                                                    2022.07 ~ 2025.03 · 2년 9개월                                                </td>
+                                            </tr>
+                                                                                            <tr>
+                                                    <td colspan="2">
+                                                                                                                    <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break:break-all">프론트엔드 · 개발&nbsp;/&nbsp;매니저 2년차</p>
+                                                                                                                        <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break:break-all">1. 소재데이터 활용 플랫폼 D3Square 클라이언트 개발<br />
+* 기술 스택: Vue2, Nuxt2, VueX, Javascript, CSS/SCSS, Playwright, GitLab<br />
+<br />
+기획 단계에서 실제 연구실 납품까지 프론트엔드 개발을 단독 담당했으며, 개발 기간동안 발생한 에러와 버그를 수정하며 문제 해결 경험을 쌓았습니다.<br />
+해당 프로젝트 개발 중 가장 복잡한 기능은 Flowchart를 활용한 워크플로우 페이지였으며, 알고리즘 기초 지식을 활용한 바이브코딩으로 문제를 신속하게 해결하였습니다.<br />
+처음으로 맡은 자사 서비스 개발이기에 Web Worker를 활용한 파일 업로드 취소 기능 등 기획에 없던 기능들을 적극 제안하며 좋은 UX를 제공하는 서비스를 만들고자 노력했습니다.<br />
+<br />
+- VueX 기반의 사용자 환경설정 및 UI 상태 관리 기능 개발. 해당 개념 이해를 기반으로 React 전환 시 빠른 적응 가능<br />
+- 데이터 바인딩 및 재사용 가능한 작은 단위의 컴포넌트 개발<br />
+- eChart, Plotly.js 기반 차트 데이터 구현, 툴팁 커스터마이징 등 데이터 시각화<br />
+- sheet.js를 통한 CSV/XLSX 업로드/다운로드 기능 및 대용량 데이터 파싱<br />
+- Web Worker 활용으로 파일 업로드 등 장시간 연산으로 발생하는 브라우저 응답 불가 현상 해결 및 작업 중 취소 기능 개발로 UX 개선<br />
+- Playwright를 통한 E2E 테스트로 사용자 플로우 검증<br />
+- Bootstrap 기반 UI 프레임워크 Vuetify를 활용한 UI 커스터마이징 경험<br />
+- Notion을 활용하여 프로젝트 마일스톤, 트러블슈팅, 사내 라이브러리 README 문서화<br />
+- GitLab 기반 형상관리<br />
+- Docker, CI/CD 프로젝트 참여로 기초 개념 이해<br />
+<br />
+<br />
+2. D3Square Vue2 -&gt; Vue3 버전 마이그레이션<br />
+* 기술 스택: Vue3, Nuxt3, VueX, Javascript, CSS/SCSS, GitLab<br />
+<br />
+Vue2의 공식 지원이 중단되어 Vue3으로 마이그레이션을 진행했습니다. Nuxt3으로 전환 당시 Nuxt Auth가 미지원되어 백엔드 개발자와 함께 인증 기능을 직접 구현했습니다. <br />
+3버전은 이전 버전과 달리 Composition API 방식을 채택하였고 신규 기능 역시 2버전 보다 React와 비슷하여 적응하는 데 어려움이 따랐으나, 1달이라는 개발 기간 안에 초기 마이그레이션을 완료하였습니다.<br />
+<br />
+- Nuxt, Vuetify 등 기존 프로젝트에서 사용하던 프레임워크의 버전 업그레이드 병행<br />
+- Auth.js를 활용한 공식 플러그인이 지원되지 않는 문제로 Pinia를 사용한 토큰 인증 관리 체계 구축<br />
+- 기존에 Mixin을 사용하여 관리하던 중복 함수를 Composable로 교체<br />
+- Plugin, Middleware 파일이 버전에 맞게 호환되도록 마이그레이션<br />
+<br />
+<br />
+3. 그 외<br />
+<br />
+자사 서비스 외에도 용역 작업의 프론트엔드 개발을 담당했습니다.<br />
+기존 Vanilla JS 지식과 직전 근무지에서 사용했던 jQuery 지식을 활용하여 계약서 상의 데드라인 내에 문제 없이 마감하였습니다.<br />
+<br />
+* 기술 스택: Vue2, Javascript, CSS, Bootstrap, jQuery<br />
+<br />
+- Vue 2, Nuxt.js, Vuetify 기반으로 약 4개 프로젝트 UI 화면 구성 및 API 통신을 활용한 기능 개발<br />
+- Bootstrap을 활용한 레이아웃<br />
+- django template으로 구성된 프로젝트에서 Vanilla JS, jQuery를 활용하여 요구사항에 따른 기능 개발</p>
+                                                                                                                        <table>
+                                                                                                                                    <tr>
+                                                                        <td style="width:100px;font-size:10px;vertical-align:top;">연봉</td>
+                                                                        <td style="width:10px;font-size:10px;color:#d7dce5;vertical-align:top;">|</td>
+                                                                        <td style="width:350px;font-size:10px;vertical-align:top;">3,800만원</td>
+                                                                    </tr>
+                                                                                                                                        <tr>
+                                                                        <td style="width:100px;font-size:10px;vertical-align:top;">근무지역</td>
+                                                                        <td style="width:10px;font-size:10px;color:#d7dce5;vertical-align:top;">|</td>
+                                                                        <td style="width:350px;font-size:10px;vertical-align:top;">서울</td>
+                                                                    </tr>
+                                                                                                                                        <tr>
+                                                                        <td style="width:100px;font-size:10px;vertical-align:top;">퇴사사유</td>
+                                                                        <td style="width:10px;font-size:10px;color:#d7dce5;vertical-align:top;">|</td>
+                                                                        <td style="width:350px;font-size:10px;vertical-align:top;">근무조건</td>
+                                                                    </tr>
+                                                                                                                                </table>
+                                                                                                                </td>
+                                                </tr>
+                                                                                        </table>
+                                    </td>
+                                </tr>
+                                                                <tr>
+                                    <td style="padding:28px 0;border-top:1px solid #d7dce5;">
+                                        <table style="width:490px;">
+                                            <tr>
+                                                <td style="text-align:left;">
+                                                    <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">㈜ 케이디아이에스</h3>
+                                                </td>
+                                                <td style="text-align:right;font-size:10px;color:#292e41;word-break: break-all">
+                                                    2020.04 ~ 2021.12 · 1년 9개월                                                </td>
+                                            </tr>
+                                                                                            <tr>
+                                                    <td colspan="2">
+                                                                                                                    <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break:break-all">퍼블리셔 · 개발팀&nbsp;/&nbsp;대리</p>
+                                                                                                                        <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break:break-all">1. 서버가상화 솔루션 연동 관리포털 PROM 개발 참여<br />
+- ajax로 DB데이터 불러오기 및 가공<br />
+- 불러온 인사DB 정보를 folder 형태의 UI로 구현 (플러그인 없이 jQuery로 직접 구현)<br />
+- eChart, Datatables 등 javascript / jQuery 라이브러리 사용<br />
+- GitLab, Slack을 통한 팀 협업<br />
+- 백엔드 DB테이블 설계 참여<br />
+<br />
+2. 서버가상화 솔루션 연동 관리포털 PROM 유지/보수<br />
+PROM을 구매한 기업에서 요청한 기능 추가 및 유지/보수<br />
+<br />
+3. 서버가상화 프로그램 연동 관리포털 PROM 랜딩페이지 제작<br />
+jQuery 플러그인을 활용한 자사 제품 홍보용 원페이지 웹 사이트 제작<br />
+<br />
+4. KDIS 회사 홈페이지 제작<br />
+jQuery 및 Bootstrap을 활용한 기업 웹 페이지 제작<br />
+</p>
+                                                                                                                        <table>
+                                                                                                                                    <tr>
+                                                                        <td style="width:100px;font-size:10px;vertical-align:top;">근무지역</td>
+                                                                        <td style="width:10px;font-size:10px;color:#d7dce5;vertical-align:top;">|</td>
+                                                                        <td style="width:350px;font-size:10px;vertical-align:top;">서울</td>
+                                                                    </tr>
+                                                                                                                                        <tr>
+                                                                        <td style="width:100px;font-size:10px;vertical-align:top;">퇴사사유</td>
+                                                                        <td style="width:10px;font-size:10px;color:#d7dce5;vertical-align:top;">|</td>
+                                                                        <td style="width:350px;font-size:10px;vertical-align:top;">프론트엔드 개발자로 전향</td>
+                                                                    </tr>
+                                                                                                                                </table>
+                                                                                                                </td>
+                                                </tr>
+                                                                                        </table>
+                                    </td>
+                                </tr>
+                                                                <tr>
+                                    <td style="padding:28px 0;border-top:1px solid #d7dce5;">
+                                        <table style="width:490px;">
+                                            <tr>
+                                                <td style="text-align:left;">
+                                                    <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">서울그래픽</h3>
+                                                </td>
+                                                <td style="text-align:right;font-size:10px;color:#292e41;word-break: break-all">
+                                                    2018.08 ~ 2019.05 · 10개월                                                </td>
+                                            </tr>
+                                                                                    </table>
+                                    </td>
+                                </tr>
+                                                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+<tr>
+    <td>
+        <table style="border-top:1px solid #8491a7;">
+            <tr>
+                <td style="width:110px;vertical-align:top;">
+                    <h2 style="font-size:12px;margin-top:28px;">학력</h2>
+                    <p style="margin-top:4px;font-size:10px;color:#67738e;word-break:break-all">
+                        대학교<em>4년</em>졸업                    </p>
+                </td>
+                <td style="width:490px;vertical-align:top;padding-bottom:32px;">
+                    <table>
+                                                    <tr>
+                                <td style="padding:28px 0;">
+                                    <table style="width:490px;">
+                                        <tr>
+                                            <td style="text-align:left;word-break:break-all;word-wrap:break-word">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    인하대학교(4년제)                                                </h3>
+                                            </td>
+                                            <td style="text-align:right;font-size:10px;color:#292e41;word-break: break-all;word-wrap:break-word">
+                                                 (졸업)                                            </td>
+                                        </tr>
+                                                                                    <tr>
+                                                <td colspan="2" style="word-break: break-all;word-wrap:break-word">
+                                                                                                            <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break: break-all">문화콘텐츠학과</p>
+                                                                                                        </td>
+                                            </tr>
+                                                                                </table>
+                                </td>
+                            </tr>
+                                                </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr><tr>
+    <td>
+        <table style="border-top:1px solid #8491a7;">
+            <tr>
+                <td style="width:110px;vertical-align:top;">
+                    <h2 style="font-size:12px;margin-top:28px;word-break: break-all">경험/활동/교육</h2>
+                </td>
+                <td style="width:490px;vertical-align:top;padding-bottom:32px;">
+                    <table>
+                                                    <tr>
+                                <td style="padding:28px 0;">
+                                    <table style="width:460px;">
+                                        <tr>
+                                            <td style="text-align:left;">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    청년취업사관학교 SeSAC                                                </h3>
+                                            </td>
+                                            <td style="text-align:right;font-size:10px;color:#292e41;word-break:break-all">
+                                                2025.05 ~ 2025.11                                            </td>
+                                        </tr>
+                                                                                    <tr>
+                                                <td colspan="2">
+                                                    <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break: break-all">프론트엔드 중심 풀스택 과정으로<br />
+Javascript, Typescript, React를 학습하고, Next.JS 를 활용한 SSR 개발 라이프사이클과 Next-Auth를 사용한 인증 구현 등 프로젝트를 진행하고 있습니다.</p>
+                                                </td>
+                                            </tr>
+                                                                                </table>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td style="padding:28px 0;border-top:1px solid #d7dce5;">
+                                    <table style="width:460px;">
+                                        <tr>
+                                            <td style="text-align:left;">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    이젠아카데미                                                </h3>
+                                            </td>
+                                            <td style="text-align:right;font-size:10px;color:#292e41;word-break:break-all">
+                                                2023.09 ~ 2023.10                                            </td>
+                                        </tr>
+                                                                                    <tr>
+                                                <td colspan="2">
+                                                    <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break: break-all">[백엔드] 노드js(Node.js) 자바스크립트<br />
+<br />
+- Nuxt.js의 작동 원리 및 백엔드 협업을 위한 서버 구조에 대한 이해 증진<br />
+- 프론트엔드 통신용 API 엔드포인트 구성 및 통신 원리, Route에 대한 이해<br />
+- fs 모듈을 통한 파일 관리<br />
+- MySQL을 활용한 테이블 생성 및 DB 연결<br />
+- GET, POST 등 통신 및 DB CRUD 과정 이해</p>
+                                                </td>
+                                            </tr>
+                                                                                </table>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td style="padding:28px 0;border-top:1px solid #d7dce5;">
+                                    <table style="width:460px;">
+                                        <tr>
+                                            <td style="text-align:left;">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    이젠아카데미                                                </h3>
+                                            </td>
+                                            <td style="text-align:right;font-size:10px;color:#292e41;word-break:break-all">
+                                                2019.07 ~ 2019.12                                            </td>
+                                        </tr>
+                                                                                    <tr>
+                                                <td colspan="2">
+                                                    <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;word-break: break-all">모바일 UI/UX 웹디자인 &amp; 웹퍼블리셔 과정<br />
+<br />
+- UI/UX 구성을 위한 Photoshop 기본 스킬 습득<br />
+- HTML, CSS, jQuery를 활용한 다이나믹 웹 구성<br />
+- 호스팅 업체를 이용하여 구성한 서버에서 PHP, MySQL을 활용한 게시판 만들기</p>
+                                                </td>
+                                            </tr>
+                                                                                </table>
+                                </td>
+                            </tr>
+                                                </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr><tr>
+    <td>
+        <table style="border-top:1px solid #8491a7;">
+            <tr>
+                <td style="width:110px;vertical-align:top;">
+                    <h2 style="font-size:12px;margin-top:28px;word-break:break-all">자기소개서</h2>
+                </td>
+                <td style="width:490px;vertical-align:top;padding-bottom:32px;">
+                    <table>
+
+                                                    <tr>
+                                <td style="padding:28px 0;">
+                                    <table style="width:490px;overflow-wrap:break-word;word-break:break-all;word-wrap:break-word;white-space:normal">
+                                        <tr>
+                                            <td style="text-align:left;">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    성장 과정                                                </h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;overflow-wrap:break-word;word-break:break-all;word-wrap:break-word;white-space:normal">어린 시절 꿈이 없었던 저는 보통 사람들과 달리 진로에 대해 뚜렷한 방향 없이 방황하며 자랐습니다. 고등학교에서 디자인을 전공하고 대학교에서는 문화콘텐츠학과를 전공한 뒤, 웹 디자이너와 퍼블리셔 직무를 거쳐 현재는 프론트엔드 개발자로서 일하고 있습니다. 하지만 이런 방황의 경험이 저를 좀 더 나은 개발자로 만들어주었다고 생각합니다. 고등학교 때 배운 전공 지식은 웹 디자이너로서의 감각을 키우는 데에 도움이 되었고, 대학교 때 배운 글쓰기와 스토리텔링 지식은 사람들이 이해하기 쉬운 문서를 작성할 수 있게 해주었습니다. 앞으로 발생할 방황과 좌절에도 굴하지 않고 모든 경험을 전부 양분으로 흡수하며 성장하는 모습을 보여드리겠습니다.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td style="padding:28px 0;border-top:1px solid #d7dce5;word-break:break-all">
+                                    <table style="width:490px;overflow-wrap:break-word;word-break:break-all;word-wrap:break-word;white-space:normal">
+                                        <tr>
+                                            <td style="text-align:left;">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    장점과 단점                                                </h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;overflow-wrap:break-word;word-break:break-all;word-wrap:break-word;white-space:normal">저의 가장 큰 장점은 제가 사용하는 개발 언어에 대한 애정과 그에 기반한 습득력입니다. 저는 퍼블리셔로 근무하며 JS에 흥미를 느껴 독학 후 프론트엔드 전향에 성공하였으며, Vue를 약 1주일 간 학습하고 곧바로 실무에 투입되었습니다. 독학으로 인해 부족했던 백엔드 기초지식도 Node JS 를 활용해 최소한의 러닝커브로 습득했습니다. React, Vue 등 프레임워크나 Typescript는 모두 JS를 기반으로 하고 있으므로 JS에 대해 관심을 갖는 것은 프론트엔드 개발자에게 필수적인 자세라고 생각하여 AI 활용 시에도 반드시 작동하는 원리를 이해한 후 코드에 적용하도록 노력합니다. 현재는 품질 좋은 코드를 작성하기 위해 실행 컨텍스트, 클로저 등을 이해하고자 심화 수업을 듣고 있습니다.<br />
+단점은 걱정이 많은 점이지만, 이는 개발 중 발생할 수 있는 문제나 부정적인 UX를 제공하는 UI 등 서비스에 부정적인 영향을 미치는 부분을 사전에 발견하고 개선하는 긍정적인 방향으로 활용하고 있습니다.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td style="padding:28px 0;border-top:1px solid #d7dce5;word-break:break-all">
+                                    <table style="width:490px;overflow-wrap:break-word;word-break:break-all;word-wrap:break-word;white-space:normal">
+                                        <tr>
+                                            <td style="text-align:left;">
+                                                <h3 style="font-size:12px;font-weight:bold;color:#292e41;word-break:break-all">
+                                                    입사 후 계획                                                </h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p style="margin:4px 0 12px 0;font-size:10px;color:#292e41;overflow-wrap:break-word;word-break:break-all;word-wrap:break-word;white-space:normal">입사 후에는 지금까지 디자이너, 퍼블리셔로 일했던 경험을 살리면서 백엔드 개발에 대한 꾸준한 공부를 통해 다양한 직군의 업무에 대해 넓은 시야로 공감하고 이해하며 팀원들과 원활하게 협업하고 싶습니다. 또한 주어진 것만 개발하는 개발자가 아니라, 지금까지 그래왔던 것처럼 어떻게 해야 더 좋은 서비스를 만들 수 있을지 고민하고 제안하는 개발자로서 일하고 싶습니다. 성능 최적화로 서비스 품질이 떨어지지 않으면서 모두가 관리하기 용이한 코드를 작성하기 위해 지금까지와 같이 JS에 대해 심도 깊게 학습함은 물론 디자인 패턴, 패러다임 등을 포함한 개발 방법론과 CS 지식 등을 공부할 것이며, 새로운 프레임워크나 패러다임을 능동적으로 학습하며 도전해야 할 때 자신 있게 시도할 수 있는 인재가 되는 것이 목표입니다.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                                                </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>    </table>
+</div>
+</body>
+</html>

@@ -1,11 +1,14 @@
-import NextAuth, { AuthError, type User } from 'next-auth';
+import { compare } from 'bcryptjs';
+import NextAuth, { AuthError } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import Github from 'next-auth/providers/github';
 import Google from 'next-auth/providers/google';
 import Kakao from 'next-auth/providers/kakao';
 import Naver from 'next-auth/providers/naver';
 import z from 'zod';
+import { findMemberByEmail } from '@/app/sign/sign.action';
 import prisma from './db';
+import { validateObject } from './validator';
 
 export const {
   handlers: { GET, POST },
@@ -34,22 +37,14 @@ export const {
       },
       async authorize(credentials) {
         // QQQ: validation check
+        const zobj = z.object({
+          email: z.email('잘못된 이메일 형식입니다.'),
+          passwd: z.string().min(6, 'More than 6 characters.'),
+        });
+        const [err, data] = validateObject(zobj, credentials);
+        if (err) return err;
 
-        console.log('🐼 ~ credentials:', credentials);
-        const { email, passwd } = credentials;
-        // const { email, passwd } = Object.fromEntries(formData.entries());
-        const validator = z
-          .object({
-            email: z.email('잘못된 이메일 형식입니다.'),
-            passwd: z.string().min(6, 'More than 6 characters.'),
-          })
-          .safeParse({ email, passwd });
-        if (!validator.success) {
-          console.log(`Error: ${validator.error}`);
-          throw new AuthError(validator.error.message);
-        }
-
-        return { email, passwd } as User;
+        return data;
       },
     }),
   ],
@@ -59,12 +54,24 @@ export const {
       console.log('🐼 ~ account:', account?.provider);
       console.log('🐼 ~ profile:', profile);
       console.log('🐼 ~ user:', user);
-      const { email, name: nickname, image } = user;
+      const { email, name: nickname, image, passwd } = user;
+
       if (!email) return false;
-      const mbr = await prisma.member.findUnique({ where: { email } });
+
+      const mbr = await findMemberByEmail(email, isCredential);
+      if (mbr?.emailcheck) {
+        return `/sign/error?error=CheckEmail&email=${email}&oldEmailcheck=${mbr.emailcheck}`;
+      }
+
       if (isCredential) {
-        if (!mbr) throw new AuthError('NotExistMember');
+        if (!mbr) throw authError('Not Exists Member!', 'EmailSignInError');
+        if (mbr.outdt) throw authError('Withdrawed Member!', 'AccessDenied'); // 탈퇴한 경우
+        if (!mbr.passwd) throw authError('SNS User!', 'OAuthAccountNotLinked'); // SNS 로그인인 경우 SNS로 돌아가라고 요청
+
         // 암호 비교 (compare) => 실패 시 오류, 성공 시 로그인
+        const isValidPasswd = await compare(passwd ?? '', mbr.passwd);
+        if (!isValidPasswd)
+          throw authError('Invalid Password!', 'CredentialsSignin');
       } else {
         //* SNS 자동가입!
         if (!mbr && nickname) {
@@ -73,9 +80,11 @@ export const {
           });
         }
       }
+
       return true;
     },
     async jwt({ token, user, trigger, account, session }) {
+      // 여기서 session 이 Any인 건 Next에서 주는 것
       console.log('🐼 ~ account:', account);
       // jwt 방식, GET /api/auth/callback/google에는 user 없음
       // const isUpdate = trigger === 'update'; // DB 업데이트 이후 사용자의 쿠키와 세션을 바꿈
@@ -84,7 +93,9 @@ export const {
         token.id = userData.id;
         token.email = userData.email;
         token.name = userData.name || userData.nickname;
-      }
+        token.image = userData.image;
+        token.isadmin = userData.isadmin;
+      } // 주는 값대로 토큰이 생성되므로 모든 값들이 다 Unknown
       return token;
     },
     async session({ session, token }) {
@@ -92,6 +103,8 @@ export const {
         session.user.id = token.id?.toString() || '';
         session.user.email = token.email as string;
         session.user.name = token.name;
+        session.user.image = token.image as string;
+        session.user.isadmin = token.isadmin;
       }
       return session;
     },
@@ -108,3 +121,9 @@ export const {
   },
   secret: process.env.AUTH_SECRET as string,
 });
+
+function authError(message: string, type: AuthError['type']) {
+  const authError = new AuthError(message);
+  authError.type = type;
+  return authError;
+}

@@ -1,9 +1,11 @@
 'use client';
+import { LoaderPinwheel } from 'lucide-react';
 import Link from 'next/link';
-import { useReducer } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useActionState, useEffect, useReducer, useRef } from 'react';
 import LabelInput from '@/components/label-input';
 import { Button } from '@/components/ui/button';
-import { authorize } from './sign.action';
+import { authorize, regist } from './sign.action';
 
 export function SignForm() {
   const [isSignin, toggleSign] = useReducer(pre => !pre, false);
@@ -19,27 +21,47 @@ export function SignForm() {
 }
 
 export function SignIn({ toggleSign }: { toggleSign: () => void }) {
-  const makeLogin = async (formData: FormData) => {
-    // const email = formData.get('email');
-    // const passwd = formData.get('passwd'); //* 정석적인 방법, string 뿐만 아니라 file도 올 수 있음
-    await authorize(formData);
-  };
+  const searchParams = useSearchParams();
+  const email = searchParams.get('email');
+  const passwdRef = useRef<HTMLInputElement>(null);
+
+  const redirectTo = searchParams.get('redirectTo');
+  const [validError, makeLogin, isPending] = useActionState(
+    authorize,
+    undefined
+  );
+
+  useEffect(() => {
+    if (email) passwdRef.current?.focus();
+  }, [email]); // DOM이 그려졌을 때
+
+  // const makeLoginAction = (formData: FormData) => {
+  //   if (redirectTo) formData.set('redirectTo', redirectTo);
+  //   makeLogin(formData);
+  // };
+
   return (
     <>
       <form action={makeLogin} className='flex flex-col space-y-3'>
+        {redirectTo && (
+          <input type='hidden' name='redirectTo' value={redirectTo} />
+        )}
         <LabelInput
           label='email'
           type='email'
           name='email'
+          error={validError}
+          focus={true}
+          defaultValue={email || ''}
           placeholder='email@bookmark.com'
-          defaultValue='beads.kode@kakao.com'
         />
         <LabelInput
           label='password'
           type='password'
           name='passwd'
+          ref={passwdRef}
+          error={validError}
           placeholder='your password...'
-          defaultValue='$2b$10$zbmpxOaO4jroF9Mmrt2M8u6TWXms1/ncqJysXXOyD69aYqPaf44jG'
         />
 
         <div className='flex justify-between'>
@@ -51,11 +73,16 @@ export function SignIn({ toggleSign }: { toggleSign: () => void }) {
             />
             Remember me
           </label>
-          <Link href='#'>Forgot Password?</Link>
+          <Link href='/forgotpasswd'>Forgot Password?</Link>
         </div>
 
-        <Button type='submit' variant={'primary'} className='w-full'>
-          Sign In
+        <Button
+          type='submit'
+          variant={'primary'}
+          className='w-full'
+          disabled={isPending}
+        >
+          {isPending ? 'Signing...' : 'Sign In'}
         </Button>
       </form>
       <div className='mt-5 flex gap-10'>
@@ -68,37 +95,59 @@ export function SignIn({ toggleSign }: { toggleSign: () => void }) {
   );
 }
 
+// const dummy = {
+//   email: 'beadskode+09@gmail.com',
+//   passwd: '121212',
+//   passwd2: '121212',
+//   nickname: '',
+// };
+
 export function SignUp({ toggleSign }: { toggleSign: () => void }) {
+  const [validError, makeRegist, isPending] = useActionState(regist, undefined); //* 서버로 보내기 / params: action method, 첫번째 인자의 초기값
   return (
     <>
-      <form className='flex flex-col space-y-3'>
+      <form action={makeRegist} className='flex flex-col space-y-3'>
         <LabelInput
           label='email'
           type='email'
           name='email'
+          error={validError}
           placeholder='email@bookmark.com'
-        />
-        <LabelInput
-          label='password'
-          type='password'
-          name='passwd'
-          placeholder='your password...'
-        />
-        <LabelInput
-          label='password confirm'
-          type='password'
-          name='passwd2'
-          placeholder='your password...'
+          // defaultValue={dummy.email}
         />
         <LabelInput
           label='nickname'
           type='text'
           name='nickname'
+          error={validError}
           placeholder='Nickname'
+          // defaultValue={dummy.nickname}
+        />
+        <LabelInput
+          label='password'
+          type='password'
+          name='passwd'
+          error={validError}
+          placeholder='your password...'
+          // defaultValue={dummy.passwd}
+        />
+        <LabelInput
+          label='password confirm'
+          type='password'
+          name='passwd2'
+          error={validError}
+          placeholder='your password...'
+          // defaultValue={dummy.passwd2}
         />
 
-        <Button type='submit' variant={'primary'} className='w-full'>
-          Sign Up
+        <Button
+          type='submit'
+          variant={'primary'}
+          className='w-full'
+          disabled={isPending}
+        >
+          {/* {isPending ? 'Signing Up...' : 'Sign Up'} */}
+          {isPending && <LoaderPinwheel className='animate-spin' />} Sign Up
         </Button>
       </form>
       <div className='mt-5 flex gap-10'>
