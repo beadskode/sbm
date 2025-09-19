@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { sendPasswordReset, sendRegistCheck } from '@/app/sign/mail.action';
 
-type sendMailBody = {
+export type SendMailBody = {
   email: string;
   emailcheck: string;
   nickname?: string;
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     emailcheck,
     nickname,
     emailType = 'regist',
-  }: sendMailBody = await req.json();
+  }: SendMailBody = await req.json();
 
   const authorization = req.headers.get('authorization');
   if (authorization !== `Bearer ${process.env.INTERNAL_SECRET}`)

@@ -96,7 +96,16 @@ export const {
         token.image = userData.image;
         token.isadmin = userData.isadmin;
       } // 주는 값대로 토큰이 생성되므로 모든 값들이 다 Unknown
-      return token;
+
+      if (account) {
+        console.log('🐼 ~ account:', account);
+        token.accessToken = account?.access_token;
+        console.log('🐼 ~ token.accessToken:', token.accessToken);
+        token.accessTokenExpires =
+          Date.now() + (account.expires_in ?? 0) * 1000;
+        token.refreshToken = account.refresh_token;
+      }
+      return token; // sns 로그인의 경우
     },
     async session({ session, token }) {
       if (token) {
