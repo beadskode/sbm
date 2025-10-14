@@ -58,7 +58,7 @@ export const {
 
       if (!email) return false;
 
-      const mbr = await findMemberByEmail(email, isCredential);
+      let mbr = await findMemberByEmail(email, isCredential);
       if (mbr?.emailcheck) {
         return `/sign/error?error=CheckEmail&email=${email}&emailcheck=${mbr.emailcheck}`;
       }
@@ -74,12 +74,17 @@ export const {
           throw authError('Invalid Password!', 'CredentialsSignin');
       } else {
         //* SNS 자동가입!
-        if (!mbr && nickname) {
-          await prisma.member.create({
-            data: { email, nickname, image },
+        if (!mbr) {
+          mbr = await prisma.member.create({
+            data: { email, nickname: nickname || 'guest', image },
           });
         }
       }
+
+      user.id = String(mbr.id);
+      user.name = mbr.nickname;
+      if (mbr.image) user.image = mbr.image;
+      user.isadmin = mbr.isadmin;
 
       return true;
     },

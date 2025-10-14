@@ -18,5 +18,5 @@ export const config = {
   matcher: [
     '/((?!sign|_next/static|_next/image|forgotpasswd|api/auth|api/sendmail|registcheck|favicon.ico|robots.txt|images|.well-known|$).*)',
     // '/api/:path*',
-  ], // matching 된 것에만 적용
+  ], // matching 된 것에만 middleware 적용
 };
