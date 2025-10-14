@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import LabelInput from '@/components/label-input';
 import { Button } from '@/components/ui/button';
 import prisma from '@/lib/db';
@@ -15,14 +16,23 @@ export default async function ResetForgotPasswd({
     where: { emailcheck },
   });
 
+  if (emailcheck !== mbr?.emailcheck)
+    redirect('/sign/error?error=InvalidEmailCheck');
+
   // compare emailcheck and db's emailcheck
 
   // 어뷰징 방지
   // TODO: compare emailcheck!! (by crypto)
   // if (!mbr) return <h1>Error</h1>;
 
-  const resetPasswd = async () => {
-    'use server';
+  const resetPasswd = async (formData: FormData) => {
+    //* 과제: useActionState로 & savePasswd
+    // 'use server';
+    // const passwd = await hash(formData.get('passwd'), 10)
+    // await prisma.member.update({
+    //   where: {email: mbr.email},
+    //   data: {passwd, }
+    // })
   };
   return (
     <div className='grid h-full place-items-center'>

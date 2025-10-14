@@ -1,9 +1,9 @@
-import { auth } from '@/lib/auth';
 import { BookMarkedIcon } from 'lucide-react';
 import type { Metadata } from 'next';
-import { SessionProvider } from 'next-auth/react';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Link from 'next/link';
+import { SessionProvider } from 'next-auth/react';
+import { auth } from '@/lib/auth';
 import { ThemeProvider } from '../components/theme-provider';
 import './globals.css';
 import Nav from './nav';
@@ -34,7 +34,6 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-
         <SessionProvider session={session}>
           <ThemeProvider
             attribute='class'
@@ -42,22 +41,22 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-          <div className='container flex flex-col justify-between h-screen mx-auto'>
-            <header className='flex justify-between border-b-2'>
-              <Link
-                href='/'
-                className='flex items-center text-3xl font-semibold tracking-tight text-green-500'
-              >
-                <BookMarkedIcon size={28} /> Bookmark
-              </Link>
+            <div className='container mx-auto flex h-screen flex-col justify-between'>
+              <header className='flex justify-between border-b-2'>
+                <Link
+                  href='/'
+                  className='flex items-center font-semibold text-3xl text-green-500 tracking-tight'
+                >
+                  <BookMarkedIcon size={28} /> Bookmark
+                </Link>
 
-              <Nav />
-            </header>
-            <main className='flex-1'>{children}</main>
-            <footer className='text-center text-green-500'>
-              &#169; Beadskode 2025 all rights reserved.
-            </footer>
-          </div>
+                <Nav />
+              </header>
+              <main className='flex-1'>{children}</main>
+              <footer className='text-center text-green-500'>
+                &#169; Beadskode 2025 all rights reserved.
+              </footer>
+            </div>
           </ThemeProvider>
         </SessionProvider>
       </body>

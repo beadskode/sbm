@@ -1,4 +1,4 @@
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 import { use } from 'react';
 import Divider from '@/components/divider';
 import { Button } from '@/components/ui/button';
@@ -24,9 +24,7 @@ export default function AuthError({ searchParams }: Props) {
         <div className='item-center flex flex-col gap-2'>
           <Button variant={'outline'} asChild={true}>
             {/* asChild로 자식 컴포넌트에 기능 위임 */}
-            <Link href={`/sign?email=${email}`} className=''>
-              Go to Login
-            </Link>
+            <Link href={`/sign?email=${email}`}>Go to Login</Link>
           </Button>
           {error === 'CheckEmail' && email && emailcheck && (
             <>

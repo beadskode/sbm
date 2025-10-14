@@ -8,6 +8,10 @@ export type SendMailBody = {
   emailType?: 'regist' | 'reset';
 };
 
+// export function GET() {
+//   return NextResponse.json({ token: newToken() });
+// }
+
 // POST /api/sendmail
 export async function POST(req: NextRequest) {
   const {
