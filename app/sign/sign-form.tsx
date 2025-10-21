@@ -20,10 +20,19 @@ export function SignForm() {
   );
 }
 
+const storeEmail = (email: string | null) => {
+  email === null
+    ? localStorage.removeItem('SBM_LOCAL_EMAIL')
+    : localStorage.setItem('SBM_LOCAL_EMAIL', email);
+};
+const readEmail = () => localStorage.getItem('SBM_LOCAL_EMAIL');
 export function SignIn({ toggleSign }: { toggleSign: () => void }) {
   const searchParams = useSearchParams();
   const email = searchParams.get('email');
+
+  const emailRef = useRef<HTMLInputElement>(null);
   const passwdRef = useRef<HTMLInputElement>(null);
+  const rememberRef = useRef<HTMLInputElement>(null);
 
   const redirectTo = searchParams.get('redirectTo');
   const [validError, makeLogin, isPending] = useActionState(
@@ -31,25 +40,39 @@ export function SignIn({ toggleSign }: { toggleSign: () => void }) {
     undefined
   );
 
-  useEffect(() => {
-    if (email) passwdRef.current?.focus();
-  }, [email]); // DOM이 그려졌을 때
+  const makeLoginAction = (formData: FormData) => {
+    rememberMe();
 
-  // const makeLoginAction = (formData: FormData) => {
-  //   if (redirectTo) formData.set('redirectTo', redirectTo);
-  //   makeLogin(formData);
-  // };
+    if (redirectTo) formData.set('redirectTo', redirectTo);
+    makeLogin(formData);
+  };
+
+  const rememberMe = () => {
+    if (rememberRef.current?.checked && emailRef.current?.value)
+      storeEmail(emailRef.current.value);
+    else storeEmail(null);
+  };
+
+  useEffect(() => {
+    const storedEmail = readEmail();
+    if (rememberRef.current) rememberRef.current.checked = !!storedEmail;
+    if (emailRef.current && storedEmail) emailRef.current.value = storedEmail;
+    if (email || storedEmail) {
+      passwdRef.current?.focus();
+    }
+  }, [email]); // DOM이 그려졌을 때
 
   return (
     <>
-      <form action={makeLogin} className='flex flex-col space-y-3'>
-        {redirectTo && (
+      <form action={makeLoginAction} className='flex flex-col space-y-3'>
+        {/* {redirectTo && (
           <input type='hidden' name='redirectTo' value={redirectTo} />
-        )}
+        )} */}
         <LabelInput
           label='email'
           type='email'
           name='email'
+          ref={emailRef}
           error={validError}
           focus={true}
           defaultValue={email || ''}
@@ -69,6 +92,8 @@ export function SignIn({ toggleSign }: { toggleSign: () => void }) {
             <input
               type='checkbox'
               id='remember'
+              ref={rememberRef}
+              onChange={rememberMe}
               className='mr-1 translate-y-[1px]'
             />
             Remember me
@@ -85,7 +110,7 @@ export function SignIn({ toggleSign }: { toggleSign: () => void }) {
           {isPending ? 'Signing...' : 'Sign In'}
         </Button>
       </form>
-      <div className='mt-5 flex gap-10'>
+      <div className='flex gap-10 mt-5'>
         <span>Don&apos;t have account?</span>
         <Link onClick={toggleSign} href='#'>
           Sign Up
@@ -150,7 +175,7 @@ export function SignUp({ toggleSign }: { toggleSign: () => void }) {
           {isPending && <LoaderPinwheel className='animate-spin' />} Sign Up
         </Button>
       </form>
-      <div className='mt-5 flex gap-10'>
+      <div className='flex gap-10 mt-5'>
         <span>Already have account?</span>
         <Link onClick={toggleSign} href='#'>
           Sign In
